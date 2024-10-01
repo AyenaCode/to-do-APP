@@ -24,6 +24,7 @@ addList.addEventListener("submit", (e) => {
 console.log(tabLists);
 
 function listItems() {
+  UlList.innerHTML = ""; // maj de la liste à 0
   if (tabLists.length > 0) {
     tabLists.forEach((element) => {
       const li = createElement("li", {
