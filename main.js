@@ -2,8 +2,6 @@ import { createElement } from "./src/dom";
 import "./style.css";
 
 const addList = document.getElementById("form");
-const markList = document.getElementById("markList");
-const deleteList = document.getElementById("deleteList");
 
 const UlList = document.getElementById("list");
 const tabLists = [];
@@ -19,6 +17,7 @@ addList.addEventListener("submit", (e) => {
   tabLists.push(textareaValue);
   addList.reset();
   listItems();
+  countTasks();
 });
 
 console.log(tabLists);
@@ -52,7 +51,12 @@ function listItems() {
 UlList.addEventListener("click", (e) => {
   if (e.target.id === "markList") {
     const taskElement = e.target.closest("li").querySelector("p");
-    taskElement.classList.toggle("line-through"); // Barre la tâche
+
+    //barrer la tâche avec une ternaire
+    taskElement.style.textDecoration === "line-through"
+      ? (taskElement.style.textDecoration = "none")
+      : (taskElement.style.textDecoration = "line-through");
+
     e.target.closest("li").classList.toggle("bg-blue"); // Change la couleur du li (tâche)
   }
 });
@@ -71,4 +75,11 @@ UlList.addEventListener("click", (e) => {
   if (index > -1) {
     tabLists.splice(index, 1);
   }
+  countTasks();
 });
+
+//4 Compter les tâches restantes : Afficher en bas de la liste le nombre de tâches restantes (non terminées).
+function countTasks() {
+  const countTasks = document.getElementById("countTasks");
+  countTasks.textContent = `Vous avez ${tabLists.length} tâches à réaliser`;
+}
