@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoAPP</title>
+  </head>
+  <body class="max-w-6xl mx-auto">
+    <div class="text-center">
+      <h1 class="text-4xl m-5">Listes des tâches</h1>
+      <form id="form">
+        <textarea
+          name="text"
+          id="text"
+          class="border-2 border-gray-500 resize-none textarea focus:bg-success/10 focus:text-white"
+          placeholder="saisissez la tâche à faire"
+          defaultValue="premier tâche"
+          cols="80"
+          rows="2"
+        ></textarea>
+        <button type="submit" class="btn btn-success block mx-auto">
+          Ajouter
+        </button>
+      </form>
+      <ul class="list">
+        <li
+          class="flex gap-4 my-2 border border-gray-100 rounded-md justify-between"
+        >
+          <p class="text-left">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt unde
+            nisi, nemo eligendi necessitatibus quos vitae voluptatem sint fuga n
+          </p>
+          <div class="flex flex-col gap-1">
+            <button class="btn rounded-none btn-success w-full">
+              Terminer
+            </button>
+            <button class="btn rounded-none btn-primary w-full">
+              Supprimer
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- <div id="app">
+      <p>Vos listes de today😊</p>
+    </div> -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
