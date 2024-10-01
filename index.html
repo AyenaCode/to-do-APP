@@ -11,7 +11,7 @@
       <h1 class="text-4xl m-5">Listes des tâches</h1>
       <form id="form">
         <textarea
-          name="text"
+          name="textarea"
           id="text"
           class="border-2 border-gray-500 resize-none textarea focus:bg-success/10 focus:text-white"
           placeholder="saisissez la tâche à faire"
@@ -23,24 +23,7 @@
           Ajouter
         </button>
       </form>
-      <ul class="list">
-        <li
-          class="flex gap-4 my-2 border border-gray-100 rounded-md justify-between"
-        >
-          <p class="text-left">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt unde
-            nisi, nemo eligendi necessitatibus quos vitae voluptatem sint fuga n
-          </p>
-          <div class="flex flex-col gap-1">
-            <button class="btn rounded-none btn-success w-full">
-              Terminer
-            </button>
-            <button class="btn rounded-none btn-primary w-full">
-              Supprimer
-            </button>
-          </div>
-        </li>
-      </ul>
+      <ul id="list"></ul>
     </div>
     <!-- <div id="app">
       <p>Vos listes de today😊</p>
