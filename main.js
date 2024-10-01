@@ -31,7 +31,7 @@ function listItems() {
           "flex gap-4 my-2 border border-gray-100 rounded-md justify-between",
       });
       li.innerHTML = `<p class="text-left">
-            Lorem ipsum dolor, sit amet consectetur ${element}
+          ${element}
           </p>
           <div class="flex flex-col gap-1">
             <button class="btn rounded-none btn-success w-full" id="markList">
