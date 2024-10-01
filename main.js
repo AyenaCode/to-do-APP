@@ -23,6 +23,7 @@ addList.addEventListener("submit", (e) => {
 
 console.log(tabLists);
 
+//1- Ajout des tâches dans la liste
 function listItems() {
   UlList.innerHTML = ""; // maj de la liste à 0
   if (tabLists.length > 0) {
@@ -46,3 +47,28 @@ function listItems() {
     });
   }
 }
+
+// 2- Marquer une tâche comme terminée
+UlList.addEventListener("click", (e) => {
+  if (e.target.id === "markList") {
+    const taskElement = e.target.closest("li").querySelector("p");
+    taskElement.classList.toggle("line-through"); // Barre la tâche
+    e.target.closest("li").classList.toggle("bg-blue"); // Change la couleur du li (tâche)
+  }
+});
+
+//3- Supprimer une tâche
+UlList.addEventListener("click", (e) => {
+  if (e.target.id === "deleteList") {
+    e.target.parentElement.parentElement.remove();
+  }
+  const taskText = e.target
+    .closest("li")
+    .querySelector("p")
+    .textContent.toString()
+    .trim();
+  const index = tabLists.indexOf(taskText);
+  if (index > -1) {
+    tabLists.splice(index, 1);
+  }
+});

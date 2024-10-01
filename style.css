@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.bg-blue {
+  background: #3899d6;
+}
+
+/* Chercher à comprendre pourquoi les styles tailwind ne sont pas pris en compte sur les éléments "li" de la liste. dès que j'ai modifier style pour ajouter .bg-blue
+et que même en revenant en arrière il n'y a rien*/
