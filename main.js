@@ -28,14 +28,14 @@ function listItems() {
       const li = createElement("li", {
         class: "",
       });
-      li.innerHTML = `<p class="text-left">
+      li.innerHTML = `<p class="text-left">${tabLists.indexOf(element) + 1}-/ 
           ${element}
           </p>
           <div class="flex flex-col gap-1">
-            <button class="btn rounded-none btn-success w-full" id="markList">
+            <button class="w-full" id="markList">
               Terminer
             </button>
-            <button class="btn rounded-none danger w-full" id="deleteList">
+            <button class="danger w-full" id="deleteList">
               Supprimer
             </button>
           </div>`;

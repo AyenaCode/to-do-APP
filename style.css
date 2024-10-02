@@ -5,6 +5,7 @@
 li {
   display: flex;
   justify-content: space-between;
+  gap: 10px 20px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #2a2a63;
@@ -13,12 +14,23 @@ li {
   box-shadow: -3px 10px 0 0 rgba(0, 0, 0, 0.2);
 }
 
+li p {
+  white-space: normal;
+  word-break: break-word;
+}
+
+li button {
+  padding: 5px;
+  background: #178bff;
+  margin: 2px;
+}
+
 .bg-blue {
   background: #17880b;
 }
 
 .danger {
-  background: #ff0000;
+  background: #e80404;
   animation: all 0.5s ease;
 }
 .danger:hover {
