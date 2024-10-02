@@ -20,16 +20,13 @@ addList.addEventListener("submit", (e) => {
   countTasks();
 });
 
-console.log(tabLists);
-
 //1- Ajout des tâches dans la liste
 function listItems() {
   UlList.innerHTML = ""; // maj de la liste à 0
   if (tabLists.length > 0) {
     tabLists.forEach((element) => {
       const li = createElement("li", {
-        class:
-          "flex gap-4 my-2 border border-gray-100 rounded-md justify-between",
+        class: "",
       });
       li.innerHTML = `<p class="text-left">
           ${element}
@@ -38,7 +35,7 @@ function listItems() {
             <button class="btn rounded-none btn-success w-full" id="markList">
               Terminer
             </button>
-            <button class="btn rounded-none btn-primary w-full" id="deleteList">
+            <button class="btn rounded-none danger w-full" id="deleteList">
               Supprimer
             </button>
           </div>`;
